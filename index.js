@@ -44,8 +44,17 @@ let pets = [
 //como faz para percorrer um array?
 
 const listarPets = () =>{
-    for(let i=0; i<pets.length; i++){
-        console.log(pets[i].nome); 
-    }
+    //for(let i=0; i<pets.length; i++){
+        //mais usado forof
+         // console.log(pets[i].nome);
+        for(let pet of pets){
+           console.log(`${pet.nome}, ${pet.idade},${pet.tipo}, ${pet.raca}`);
+
+        
+        //console.log(pets[i].nome); 
+        //console(´O nome do pet é ${pets[i].nome}`);
+        //${} indica que tem um conteudo variável
+
+        }
 }
 listarPets();
