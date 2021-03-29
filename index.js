@@ -31,6 +31,7 @@ const vacinarPet = () => {
         } else {
             console.log(`O ${pet.nome} precisa ser vacinado!`)
         }
+            
     }
 }
 vacinarPet();
@@ -38,9 +39,7 @@ vacinarPet();
 const campanhaVacinar = () => {
     let soma = 0;
     for (let pet of bancoDados.pets) {
-        if (pet.vacinado == false) {
-            soma++;
-        }
+        (pet.vacinado == false) ?  soma++ : null;
     }
     console.log(`${soma} pets foram vacinados`);
 
@@ -108,23 +107,23 @@ const atenderCliente = (pet, servicos) => {
 
 const darBanhoPet = pet => {
     atenderCliente(pet, 'banho');
-    console.log(`${pet.nome} tomou banho!`)
+    console.log(`Olá! ${pet.nome} já tomou banho! Tenha um ótimo dia! Volte sempre!`)
 }
 
 const tosarPet = pet => {
     atenderCliente(pet, 'tosa');
-    console.log(`${pet.nome} foi tosado! `)
+    console.log(`Olá! ${pet.nome} foi tosado! Tenha um ótimo dia! Volte sempre! `)
 
 }
 const apararUnhasPet = pet => {
     atenderCliente(pet, 'pedicure');
-    console.log(`${pet.nome} está com as unhas cortadinhas!`)
+    console.log(`Olá! ${pet.nome} está com as unhas cortadinhas! Tenha um ótimo dia! Volte sempre!`)
 
 }
 
 darBanhoPet(bancoDados.pets[1]);
 tosarPet(bancoDados.pets[2]);
-apararUnhasPet(bancoDados.pets[2]);
+apararUnhasPet(bancoDados.pets[4]);
 
 
 
