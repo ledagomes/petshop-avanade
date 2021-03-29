@@ -7,7 +7,7 @@
             "raça": "SRD",
             "peso": "20",
             "tutor": "Leda",
-            "fone": "1199333-3333", 
+            "fone": "1199333-3333",
             "vacinado": true,
             "servicos": [
                 "banho",
@@ -22,7 +22,7 @@
             "peso": "22",
             "tutor": "João",
             "fone": "1199333-4444",
-            "vacinado": false,
+            "vacinado": true,
             "servicos": [
                 "banho"
             ]
@@ -40,6 +40,17 @@
                 "banho",
                 "pedicure"
             ]
+        },
+        {
+            "nome": "Dolores",
+            "tipo": "gato",
+            "idade": 9,
+            "raca": "SRD",
+            "peso": "10",
+            "tutor": "Leda",
+            "fone": "1199333-5555",
+            "vacinado": false,
+            "servicos": []
         }
     ]
 }

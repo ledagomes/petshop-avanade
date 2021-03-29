@@ -1,29 +1,30 @@
 const nomePetshop = "PETSHOP AVANADE";
+const fs = require('fs');
+//const todosPets = require('./todosPets.json');
+let todosPets = fs.readFileSync('./todosPets.json');
 
-const bancoDados = require('./todosPets.json');
+bancoDados = JSON.parse(todosPets);
 
-let pets = bancoDados.pets;
-//console.log(bancoDados);
-
-
-//ctrl barra console.log(pet);
-//criar uma função para imprimir aerofunction
-//como faz para percorrer um array?
 
 const listarPets = () => {
     //for(let i=0; i<pets.length; i++){
     //mais usado forof
     // console.log(pets[i].nome);
-    for (let pet of pets) {
+    for (let pet of bancoDados.pets) {
         console.log(`${pet.nome}, ${pet.idade},${pet.tipo}, ${pet.raca}`);
 
     }
 };
 listarPets();
 
+const AtualizarBancoDados = ()=>{
+    let petAtualizado = JSON.stringify(bancoDados);
+    fs.writeFileSync('./todosPets.json' , petAtualizado, 'utf-8');
+
+}
 
 const vacinarPet = () => {
-    for (let pet of pets) {
+    for (let pet of bancoDados.pets) {
         if (!pet.vacinado) {
             pet.vacinado = true;
             console.log(`Pets que estão vacinados: ${pet.nome} `);
@@ -32,12 +33,11 @@ const vacinarPet = () => {
         }
     }
 }
-
 vacinarPet();
 
 const campanhaVacinar = () => {
     let soma = 0;
-    for (let pet of pets) {
+    for (let pet of bancoDados.pets) {
         if (pet.vacinado == false) {
             soma++;
         }
@@ -47,31 +47,25 @@ const campanhaVacinar = () => {
 }
 campanhaVacinar();
 
-const incluirPet = () => {
-    pets.push({
-        nome: 'Sultão',
+const adicionarPet = novoPet => {
+    bancoDados.pets.push(novoPet);
+    AtualizarBancoDados(); 
+    console.log(`${novoPet.nome} foi adicionado com sucesso!`);
+}
+ adicionarPet({
+        nome: 'Dolores',
         tipo: 'gato',
-        idade: 3,
-        raça: 'SRD',
-        peso: '15',
-        tutor: 'Gertrudes',
-        fone: '1199333-666',
-        vacinado: true,
+        idade: 9,
+        raca: 'SRD',
+        peso: '10',
+        tutor: 'Leda',
+        fone: '1199333-5555',
+        vacinado: false,
         servicos: []
     });
-    for (let pet of pets) {
+    for (let pet of bancoDados.pets) {
         console.log(pet.nome)
     }
-}
-incluirPet();
-
-/*Serviços do petshop
-Crie uma função chamada darBanhoPet(pet) que adiciona o 'banho' a lista
-de serviços no historico do pet e exibe a mensagem <Nome do Pet> está de banho tomado!
-Crie uma função chamada tosarPet(pet) que adiciona o 'tosa' a lista de
-serviços no historico do pet e exibe  a mensagem <Nome do Pet> está com cabelinho na régua
-Crie uma função chamada apararUnhasPet(pet) que adiciona o 'tosa' a lista
-de serviços no historico do pet e exibe a mensagem <Nome do Pet>  está de unhas aparadas!*/
 
 
 /*const darBanhoPet = () => {
@@ -128,9 +122,9 @@ const apararUnhasPet = pet => {
 
 }
 
-darBanhoPet(pets[1]);
-tosarPet(pets[3]);
-apararUnhasPet(pets[2]);
+darBanhoPet(bancoDados.pets[1]);
+tosarPet(bancoDados.pets[2]);
+apararUnhasPet(bancoDados.pets[2]);
 
 
 
