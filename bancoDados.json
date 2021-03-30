@@ -1,0 +1,89 @@
+{
+  "pets": [
+    {
+      "nome": "Billy",
+      "tipo": "cão",
+      "idade": 11,
+      "raça": "SRD",
+      "peso": "20",
+      "tutor": "Leda",
+      "fone": "1199333-3333",
+      "vacinado": true,
+      "servicos": [
+        "banho",
+        "tosa"
+      ]
+    },
+    {
+      "nome": "Penelope",
+      "tipo": "cão",
+      "idade": 17,
+      "raça": "SRD",
+      "peso": "22",
+      "tutor": "João",
+      "fone": "1199333-4444",
+      "vacinado": true,
+      "servicos": [
+        "banho"
+      ]
+    },
+    {
+      "nome": "Angel",
+      "tipo": "cão",
+      "idade": 7,
+      "raça": "SRD",
+      "peso": "15",
+      "tutor": "Gustavo",
+      "fone": "1199333-5555",
+      "vacinado": true,
+      "servicos": [
+        "banho",
+        "pedicure"
+      ]
+    },
+    {
+      "nome": "Dolores",
+      "tipo": "gato",
+      "idade": 9,
+      "raca": "SRD",
+      "peso": "10",
+      "tutor": "Leda",
+      "fone": "1199333-5555",
+      "vacinado": true,
+      "servicos": []
+    },
+    {
+      "nome": "Dolores",
+      "tipo": "gato",
+      "idade": 9,
+      "raca": "SRD",
+      "peso": "10",
+      "tutor": "Leda",
+      "fone": "1199333-5555",
+      "vacinado": true,
+      "servicos": []
+    },
+    {
+      "nome": "Dolores",
+      "tipo": "gato",
+      "idade": 9,
+      "raca": "SRD",
+      "peso": "10",
+      "tutor": "Leda",
+      "fone": "1199333-5555",
+      "vacinado": false,
+      "servicos": []
+    },
+    {
+      "nome": "Dolores",
+      "tipo": "gato",
+      "idade": 9,
+      "raca": "SRD",
+      "peso": "10",
+      "tutor": "Leda",
+      "fone": "1199333-5555",
+      "vacinado": false,
+      "servicos": []
+    }
+  ]
+}
